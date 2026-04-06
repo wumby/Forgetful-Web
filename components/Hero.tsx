@@ -54,18 +54,6 @@ export default function Hero() {
   const qrCodeUrl =
     "https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://www.yourwebsite.com";
 
-  const handleScrollToScreenshots = () => {
-    const section = document.getElementById("screenshots");
-    if (!section) return;
-
-    section.scrollIntoView({ behavior: "smooth", block: "start" });
-    window.history.replaceState(
-      null,
-      "",
-      window.location.pathname + window.location.search,
-    );
-  };
-
   return (
     <div className="hero-shell h-screen w-screen bg-background flex items-center justify-center">
       <div className="hero-layout grid grid-cols-1 lg:grid-cols-[minmax(0,1.02fr)_minmax(360px,0.98fr)] max-w-7xl mx-auto px-4 lg:px-8">
@@ -186,23 +174,6 @@ export default function Hero() {
           </motion.div>
         </motion.div>
       </div>
-      <motion.div
-        className="hero-scroll-wrap"
-        initial={{ opacity: 0, x: "-50%", y: 12 }}
-        animate={{ opacity: 1, x: "-50%", y: 0 }}
-        transition={{ duration: 0.7, delay: 1 }}
-      >
-        <button
-          type="button"
-          className="hero-scroll-link"
-          aria-label="Scroll to screenshots"
-          onClick={handleScrollToScreenshots}
-        >
-          <span className="hero-scroll-arrow" aria-hidden="true">
-            ↓
-          </span>
-        </button>
-      </motion.div>
     </div>
   );
 }
