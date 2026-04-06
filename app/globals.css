@@ -21,7 +21,13 @@ body {
   min-height: 100%;
   background: #070607;
   color: #f4f1ec;
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    sans-serif;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
 }
@@ -31,7 +37,11 @@ a {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   margin: 0;
 }
 
@@ -69,10 +79,26 @@ main {
   position: relative;
   isolation: isolate;
   background:
-    radial-gradient(circle at 82% 14%, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0) 22%),
-    radial-gradient(circle at 18% 10%, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0) 20%),
-    radial-gradient(circle at 76% 42%, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0) 22%),
-    radial-gradient(circle at 50% 78%, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0) 24%),
+    radial-gradient(
+      circle at 82% 14%,
+      rgba(255, 255, 255, 0.06),
+      rgba(255, 255, 255, 0) 22%
+    ),
+    radial-gradient(
+      circle at 18% 10%,
+      rgba(255, 255, 255, 0.045),
+      rgba(255, 255, 255, 0) 20%
+    ),
+    radial-gradient(
+      circle at 76% 42%,
+      rgba(255, 255, 255, 0.04),
+      rgba(255, 255, 255, 0) 22%
+    ),
+    radial-gradient(
+      circle at 50% 78%,
+      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0) 24%
+    ),
     linear-gradient(180deg, rgba(255, 255, 255, 0.012), rgba(255, 255, 255, 0));
 }
 
@@ -99,7 +125,11 @@ main {
   height: 20rem;
   transform: translateX(-50%);
   border-radius: 999px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0));
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0)
+  );
   filter: blur(48px);
   pointer-events: none;
   z-index: -1;
@@ -119,7 +149,11 @@ main {
   width: 24rem;
   height: 24rem;
   border-radius: 999px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0)
+  );
   filter: blur(28px);
   opacity: 0.7;
 }
@@ -132,7 +166,11 @@ main {
   height: 20rem;
   transform: translateX(-50%);
   border-radius: 999px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0));
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0)
+  );
   filter: blur(46px);
   opacity: 0.72;
 }
@@ -170,8 +208,16 @@ main {
   transform: translate(-50%, -50%);
   border-radius: 999px;
   background:
-    radial-gradient(circle, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0) 58%),
-    radial-gradient(circle, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0) 74%);
+    radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.11),
+      rgba(255, 255, 255, 0) 58%
+    ),
+    radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.06),
+      rgba(255, 255, 255, 0) 74%
+    );
   filter: blur(46px);
   opacity: 0.92;
   pointer-events: none;
@@ -219,7 +265,11 @@ main {
   letter-spacing: -0.01em;
   text-decoration: none;
   border-radius: 999px;
-  transition: transform 0.18s ease, background-color 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+  transition:
+    transform 0.18s ease,
+    background-color 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
   cursor: pointer;
   position: relative;
   overflow: hidden;
@@ -231,7 +281,11 @@ main {
 }
 
 .hero-button.primary {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(244, 240, 235, 0.92));
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.97),
+    rgba(244, 240, 235, 0.92)
+  );
   color: #070607;
   border: 1px solid rgba(255, 255, 255, 0.72);
   box-shadow:
@@ -241,7 +295,11 @@ main {
 }
 
 .hero-button.primary:hover {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(247, 243, 239, 0.96));
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1),
+    rgba(247, 243, 239, 0.96)
+  );
   border-color: rgba(255, 255, 255, 0.9);
   transform: translateY(-1px) scale(1.008);
   box-shadow:
@@ -275,13 +333,18 @@ main {
 
 /* Subtle glow effect */
 .hero-button::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
   transition: left 0.5s;
 }
 
@@ -364,7 +427,11 @@ main {
   height: 20rem;
   transform: translate(-50%, -50%);
   border-radius: 999px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0));
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.065),
+    rgba(255, 255, 255, 0)
+  );
   filter: blur(48px);
   opacity: 0.78;
   pointer-events: none;
@@ -397,7 +464,10 @@ main {
     inset 0 1px 0 rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  transition: transform 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
+  transition:
+    transform 0.18s ease,
+    background-color 0.18s ease,
+    border-color 0.18s ease;
 }
 
 .hero-scroll-link:hover {
@@ -420,8 +490,16 @@ main {
   padding: 1.28rem;
   border-radius: 2rem;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.068), rgba(255, 255, 255, 0.018)),
-    radial-gradient(circle at top, rgba(244, 241, 236, 0.065), rgba(244, 241, 236, 0));
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.068),
+      rgba(255, 255, 255, 0.018)
+    ),
+    radial-gradient(
+      circle at top,
+      rgba(244, 241, 236, 0.065),
+      rgba(244, 241, 236, 0)
+    );
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 28px 72px rgba(0, 0, 0, 0.3);
 }
@@ -439,7 +517,11 @@ main {
   position: relative;
   padding: 0.45rem;
   border-radius: 1.35rem;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.05));
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.14),
+    rgba(255, 255, 255, 0.05)
+  );
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 22px 44px rgba(0, 0, 0, 0.3);
   transition: box-shadow 0.3s ease;
@@ -479,7 +561,11 @@ main {
   height: 18rem;
   width: 28rem;
   border-radius: 999px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0));
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0)
+  );
   filter: blur(36px);
   pointer-events: none;
 }
@@ -493,7 +579,11 @@ main {
   height: 18rem;
   transform: translateX(-50%);
   border-radius: 999px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0));
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0)
+  );
   filter: blur(48px);
   pointer-events: none;
 }
@@ -552,7 +642,11 @@ main {
   height: 16rem;
   transform: translateX(-50%);
   border-radius: 999px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0));
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0)
+  );
   filter: blur(34px);
   pointer-events: none;
 }
@@ -588,7 +682,12 @@ main {
 .screenshots-swipe-line {
   width: 2.4rem;
   height: 1px;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0));
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.22),
+    rgba(255, 255, 255, 0)
+  );
 }
 
 .screenshots-swipe-copy {
@@ -615,7 +714,10 @@ main {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   cursor: pointer;
-  transition: transform 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
+  transition:
+    transform 0.18s ease,
+    background-color 0.18s ease,
+    border-color 0.18s ease;
 }
 
 .screenshots-arrow:hover {
@@ -643,7 +745,10 @@ main {
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.18);
   cursor: pointer;
-  transition: transform 0.18s ease, background-color 0.18s ease, width 0.18s ease;
+  transition:
+    transform 0.18s ease,
+    background-color 0.18s ease,
+    width 0.18s ease;
 }
 
 .screenshots-dot.is-active {
@@ -682,19 +787,27 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform 0.38s ease, opacity 0.38s ease, filter 0.38s ease;
+  transition:
+    transform 0.38s ease,
+    opacity 0.38s ease,
+    filter 0.38s ease;
 }
 
 .screenshots-phone {
   width: min(100%, 14.2rem);
   filter: drop-shadow(0 30px 44px rgba(0, 0, 0, 0.24));
-  transition: transform 0.38s ease, filter 0.38s ease, opacity 0.38s ease;
+  transition:
+    transform 0.38s ease,
+    filter 0.38s ease,
+    opacity 0.38s ease;
 }
 
 .screenshots-slide-copy {
   padding: 0.55rem 0.35rem 0;
   text-align: center;
-  transition: opacity 0.28s ease, transform 0.28s ease;
+  transition:
+    opacity 0.28s ease,
+    transform 0.28s ease;
 }
 
 .screenshots-slide-title {
@@ -749,7 +862,11 @@ main {
   height: 16rem;
   transform: translateX(-50%);
   border-radius: 999px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0));
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.055),
+    rgba(255, 255, 255, 0)
+  );
   filter: blur(38px);
   pointer-events: none;
 }
@@ -800,7 +917,11 @@ main {
   padding: 1.2rem 1.15rem 1.25rem;
   border-radius: 1.55rem;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.018)),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.055),
+      rgba(255, 255, 255, 0.018)
+    ),
     rgba(12, 11, 13, 0.76);
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow:
@@ -961,7 +1082,8 @@ main {
 
   .screenshots-section {
     min-height: 100svh;
-    padding: max(0.75rem, env(safe-area-inset-top)) 1rem max(0.9rem, env(safe-area-inset-bottom));
+    padding: max(0.75rem, env(safe-area-inset-top)) 1rem
+      max(0.9rem, env(safe-area-inset-bottom));
   }
 
   .screenshots-copy {
@@ -984,7 +1106,8 @@ main {
 
   .info-section {
     min-height: 100svh;
-    padding: max(0.85rem, env(safe-area-inset-top)) 1rem max(0.95rem, env(safe-area-inset-bottom));
+    padding: max(0.85rem, env(safe-area-inset-top)) 1rem
+      max(0.95rem, env(safe-area-inset-bottom));
   }
 
   .info-copy {

@@ -16,8 +16,18 @@ const previewClusterVariants = {
 const previewCards = [
   { className: "hero-preview-card-one", baseY: 3, baseRotate: -5, drift: 2.5 },
   { className: "hero-preview-card-two", baseY: -6, baseRotate: 4, drift: 2.25 },
-  { className: "hero-preview-card-three", baseY: -7, baseRotate: 3, drift: 2.75 },
-  { className: "hero-preview-card-four", baseY: 2, baseRotate: -4, drift: 2.25 },
+  {
+    className: "hero-preview-card-three",
+    baseY: -7,
+    baseRotate: 3,
+    drift: 2.75,
+  },
+  {
+    className: "hero-preview-card-four",
+    baseY: 2,
+    baseRotate: -4,
+    drift: 2.25,
+  },
 ];
 
 const previewCardVariants = {
@@ -49,7 +59,11 @@ export default function Hero() {
     if (!section) return;
 
     section.scrollIntoView({ behavior: "smooth", block: "start" });
-    window.history.replaceState(null, "", window.location.pathname + window.location.search);
+    window.history.replaceState(
+      null,
+      "",
+      window.location.pathname + window.location.search,
+    );
   };
 
   return (
@@ -103,14 +117,20 @@ export default function Hero() {
                 className="hero-qr-image"
               />
             </div>
-            <Link href={appStoreUrl} className="hero-button primary hero-desktop-store-button">
+            <Link
+              href={appStoreUrl}
+              className="hero-button primary hero-desktop-store-button"
+            >
               <span className="hero-download-copy">
                 <span className="hero-download-kicker">Available on</span>
                 <span className="hero-download-label">the App Store</span>
               </span>
             </Link>
             <div className="hero-button-group">
-              <Link href={appStoreUrl} className="hero-button primary hero-download-button">
+              <Link
+                href={appStoreUrl}
+                className="hero-button primary hero-download-button"
+              >
                 <span className="hero-download-copy">
                   <span className="hero-download-kicker">Download on</span>
                   <span className="hero-download-label">the App Store</span>
@@ -178,7 +198,9 @@ export default function Hero() {
           aria-label="Scroll to screenshots"
           onClick={handleScrollToScreenshots}
         >
-          <span className="hero-scroll-arrow" aria-hidden="true">↓</span>
+          <span className="hero-scroll-arrow" aria-hidden="true">
+            ↓
+          </span>
         </button>
       </motion.div>
     </div>

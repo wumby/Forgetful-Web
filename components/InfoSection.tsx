@@ -70,7 +70,9 @@ export default function InfoSection() {
           <h2 id="info-heading" className="info-heading">
             Everything you need, kept simple.
           </h2>
-          <p className="info-intro">Privacy, support, and terms — all in one place.</p>
+          <p className="info-intro">
+            Privacy, support, and terms — all in one place.
+          </p>
         </motion.div>
 
         <motion.div className="info-grid" variants={itemReveal}>

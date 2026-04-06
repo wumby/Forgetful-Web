@@ -67,7 +67,9 @@ export default function ScreenshotsSection() {
     const updateSlidesPerView = () => {
       if (window.innerWidth >= 1024) {
         setSlidesPerView(3);
-        setActiveIndex((prev) => (prev === 0 ? 1 : Math.min(prev, screenshots.length - 1)));
+        setActiveIndex((prev) =>
+          prev === 0 ? 1 : Math.min(prev, screenshots.length - 1),
+        );
         return;
       }
 
@@ -93,7 +95,7 @@ export default function ScreenshotsSection() {
       isDesktopGallery
         ? screenshots.length
         : Math.max(1, screenshots.length - slidesPerView + 1),
-    [isDesktopGallery, slidesPerView]
+    [isDesktopGallery, slidesPerView],
   );
   const featuredIndex = activeIndex;
 
@@ -130,7 +132,8 @@ export default function ScreenshotsSection() {
   };
 
   const getDesktopRole = (index: number) => {
-    const leftIndex = (featuredIndex - 1 + screenshots.length) % screenshots.length;
+    const leftIndex =
+      (featuredIndex - 1 + screenshots.length) % screenshots.length;
     const rightIndex = (featuredIndex + 1) % screenshots.length;
 
     if (index === featuredIndex) return "center";
@@ -171,7 +174,10 @@ export default function ScreenshotsSection() {
 
         <motion.div className="screenshots-carousel-wrap" variants={itemReveal}>
           <div className="screenshots-gallery-stage">
-            <div className="screenshots-carousel-controls" aria-label="Screenshot navigation">
+            <div
+              className="screenshots-carousel-controls"
+              aria-label="Screenshot navigation"
+            >
               <button
                 type="button"
                 className="screenshots-arrow"
@@ -228,8 +234,12 @@ export default function ScreenshotsSection() {
                         aria-label={shot.alt}
                       />
                       <div className="screenshots-slide-copy">
-                        <h3 className="screenshots-slide-title">{shot.title}</h3>
-                        <p className="screenshots-slide-description">{shot.description}</p>
+                        <h3 className="screenshots-slide-title">
+                          {shot.title}
+                        </h3>
+                        <p className="screenshots-slide-description">
+                          {shot.description}
+                        </p>
                       </div>
                     </motion.article>
                   );
@@ -261,8 +271,12 @@ export default function ScreenshotsSection() {
                         aria-label={shot.alt}
                       />
                       <div className="screenshots-slide-copy">
-                        <h3 className="screenshots-slide-title">{shot.title}</h3>
-                        <p className="screenshots-slide-description">{shot.description}</p>
+                        <h3 className="screenshots-slide-title">
+                          {shot.title}
+                        </h3>
+                        <p className="screenshots-slide-description">
+                          {shot.description}
+                        </p>
                       </div>
                     </motion.article>
                   );
