@@ -6,25 +6,25 @@ const panels = [
   {
     title: "Privacy",
     items: [
-      "Forgetful stores the memories, notes, and photos you create.",
-      "Content is intended to stay on-device unless a future sync feature is explicitly enabled.",
-      "Camera, photo library, and notifications are only used for features you choose to use.",
+      "Forgetful stores the mementos, notes, and photos you add.",
+      "Your content stays on-device unless a future sync feature is turned on.",
+      "Camera, photo library, and notifications are only used when you choose those features.",
     ],
   },
   {
     title: "Support",
     items: [
-      "Use support for bug reports, feature requests, and help with the app.",
-      "Include your device, iOS version, and what happened so issues can be reproduced faster.",
-      "Questions about your data or app behavior are welcome there too.",
+      "Use support for bug reports, questions, and feature requests.",
+      "Include your device, iOS version, and what happened to help us troubleshoot faster.",
+      "We can also help with data or app behavior questions.",
     ],
   },
   {
     title: "Terms",
     items: [
-      "Use Forgetful lawfully and without disrupting the app or its services.",
-      "You keep ownership of the memories and photos you create in the app.",
-      "Features may evolve over time, and availability or liability is limited to the extent allowed by law.",
+      "Use Forgetful respectfully and within the law.",
+      "You keep ownership of the memories and photos you create.",
+      "Features may change over time, and availability is not guaranteed.",
     ],
   },
 ];
@@ -67,19 +67,19 @@ export default function InfoSection() {
     >
       <div className="info-shell">
         <motion.div className="info-copy" variants={itemReveal}>
-          <span className="info-eyebrow">Info</span>
           <h2 id="info-heading" className="info-heading">
-            Privacy, support, and terms. Kept readable.
+            Everything you need, kept simple.
           </h2>
-          <p className="info-intro">
-            Everything you need to trust Forgetful, get help, and understand how
-            the app works, gathered into one clean final section.
-          </p>
+          <p className="info-intro">Privacy, support, and terms — all in one place.</p>
         </motion.div>
 
         <motion.div className="info-grid" variants={itemReveal}>
           {panels.map((panel) => (
-            <motion.article key={panel.title} className="info-card" variants={itemReveal}>
+            <motion.article
+              key={panel.title}
+              className={`info-card${panel.title === "Terms" ? " is-terms" : ""}`}
+              variants={itemReveal}
+            >
               <h3 className="info-card-title">{panel.title}</h3>
               <ul className="info-list">
                 {panel.items.map((item) => (
@@ -93,7 +93,7 @@ export default function InfoSection() {
         </motion.div>
 
         <motion.div className="info-section-contact" variants={itemReveal}>
-          <span className="info-contact-label">Questions, support, or privacy requests</span>
+          <span className="info-contact-label">Questions or support</span>
           <a href="mailto:hello@forgetful.app" className="info-contact-value">
             hello@forgetful.app
           </a>

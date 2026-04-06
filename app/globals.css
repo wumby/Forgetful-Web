@@ -164,14 +164,16 @@ main {
   content: "";
   position: absolute;
   left: 50%;
-  top: 42%;
-  width: min(80vw, 30rem);
-  height: 16rem;
+  top: 40%;
+  width: min(88vw, 36rem);
+  height: 19rem;
   transform: translate(-50%, -50%);
   border-radius: 999px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0));
-  filter: blur(42px);
-  opacity: 0.75;
+  background:
+    radial-gradient(circle, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0) 58%),
+    radial-gradient(circle, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0) 74%);
+  filter: blur(46px);
+  opacity: 0.92;
   pointer-events: none;
   z-index: -1;
 }
@@ -383,10 +385,13 @@ main {
   justify-content: center;
   width: 2.7rem;
   height: 2.7rem;
+  padding: 0;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(255, 255, 255, 0.03);
   color: rgba(244, 241, 236, 0.74);
+  appearance: none;
+  cursor: pointer;
   box-shadow:
     0 14px 30px rgba(0, 0, 0, 0.18),
     inset 0 1px 0 rgba(255, 255, 255, 0.04);
@@ -990,6 +995,28 @@ main {
     padding: 1rem 1rem 1.05rem;
     border-radius: 1.3rem;
   }
+
+  .info-card.is-terms {
+    padding: 0.88rem 0.95rem 0.94rem;
+  }
+
+  .info-card.is-terms .info-card-title {
+    margin-bottom: 0.72rem;
+    font-size: 0.96rem;
+  }
+
+  .info-card.is-terms .info-list {
+    gap: 0.56rem;
+  }
+
+  .info-card.is-terms .info-list-item {
+    font-size: 0.88rem;
+    line-height: 1.38;
+  }
+
+  .info-card.is-terms .info-list-item::before {
+    top: 0.5rem;
+  }
 }
 
 @media (min-width: 640px) {
@@ -1114,6 +1141,10 @@ main {
 
   .screenshots-carousel-controls {
     margin: 0 auto 0.8rem;
+  }
+
+  .screenshots-dots {
+    display: none;
   }
 
   .screenshots-desktop-stage {
