@@ -30,11 +30,8 @@ const panels = [
 ];
 
 const sectionReveal = {
-  hidden: { opacity: 0.72, y: 20, filter: "blur(6px)" },
+  hidden: {},
   visible: {
-    opacity: 1,
-    y: 0,
-    filter: "blur(0px)",
     transition: {
       duration: 0.55,
       ease: "easeOut",
@@ -57,15 +54,17 @@ const itemReveal = {
 
 export default function InfoSection() {
   return (
-    <motion.section
+    <section
       className="info-section"
       aria-labelledby="info-heading"
-      variants={sectionReveal}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.25 }}
     >
-      <div className="info-shell">
+      <motion.div
+        className="info-shell"
+        variants={sectionReveal}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <motion.div className="info-copy" variants={itemReveal}>
           <h2 id="info-heading" className="info-heading">
             Everything you need, kept simple.
@@ -100,7 +99,7 @@ export default function InfoSection() {
             hello@forgetful.app
           </a>
         </motion.div>
-      </div>
-    </motion.section>
+      </motion.div>
+    </section>
   );
 }

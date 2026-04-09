@@ -33,11 +33,8 @@ const screenshots: Screenshot[] = [
 ];
 
 const sectionReveal = {
-  hidden: { opacity: 0.72, y: 20, filter: "blur(6px)" },
+  hidden: {},
   visible: {
-    opacity: 1,
-    y: 0,
-    filter: "blur(0px)",
     transition: {
       duration: 0.55,
       ease: "easeOut",
@@ -156,16 +153,18 @@ export default function ScreenshotsSection() {
   };
 
   return (
-    <motion.section
+    <section
       id="screenshots"
       className="screenshots-section"
       aria-labelledby="screenshots-heading"
-      variants={sectionReveal}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.25 }}
     >
-      <div className="screenshots-shell">
+      <motion.div
+        className="screenshots-shell"
+        variants={sectionReveal}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <motion.div className="screenshots-copy" variants={itemReveal}>
           <h2 id="screenshots-heading" className="screenshots-heading">
             See Forgetful in motion.
@@ -285,7 +284,7 @@ export default function ScreenshotsSection() {
             )}
           </div>
         </motion.div>
-      </div>
-    </motion.section>
+      </motion.div>
+    </section>
   );
 }
