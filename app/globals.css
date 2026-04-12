@@ -1169,6 +1169,12 @@ main {
   font-weight: 650;
 }
 
+.support-button-secondary {
+  background: transparent;
+  color: rgba(244, 241, 236, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
 @media (max-width: 639px) {
   .hero-shell {
     align-items: stretch;
@@ -1313,6 +1319,11 @@ main {
 
   .info-card.is-terms .info-list-item::before {
     top: 0.5rem;
+  }
+
+  .info-section-contact {
+    margin-top: 1.35rem;
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
   }
 }
 

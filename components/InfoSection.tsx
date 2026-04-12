@@ -72,7 +72,7 @@ export default function InfoSection() {
             Everything you need, kept simple.
           </h2>
           <p className="info-intro">
-            Privacy, support, and terms — all in one place.
+            Privacy, support, and terms for using Forgetful.
           </p>
         </motion.div>
 
@@ -105,6 +105,9 @@ export default function InfoSection() {
           </a>
           <Link href="/support" className="info-contact-link">
             Visit support page
+          </Link>
+          <Link href="/privacy" className="info-contact-link">
+            Read privacy page
           </Link>
         </motion.div>
       </motion.div>
