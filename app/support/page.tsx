@@ -20,13 +20,13 @@ export const metadata: Metadata = {
 const supportTopics = [
   "Bug reports and app crashes",
   "Questions about mementos, reminders, and app behavior",
-  "Feature requests and product feedback",
+  "Feature requests and general feedback",
 ];
 
 const supportChecklist = [
   "Your device model and iOS version",
   "What you expected to happen",
-  "What actually happened",
+  "What happened instead",
   "Screenshots if they help explain the issue",
 ];
 
@@ -37,19 +37,22 @@ export default function SupportPage() {
         <span className="support-eyebrow">Support</span>
         <h1 className="support-title">Help for Forgetful</h1>
         <p className="support-intro">
-          Reach out with bug reports, product questions, or feedback and we
-          will get back to you as soon as we can.
+          Reach out with questions, bug reports, or feedback.
         </p>
 
         <div className="support-grid">
           <article className="support-card">
             <h2 className="support-card-title">Contact</h2>
             <p className="support-card-copy">
-              Email{" "}
+              Contact us at{" "}
               <a href={`mailto:${siteConfig.supportEmail}`} className="support-link">
                 {siteConfig.supportEmail}
               </a>{" "}
               for questions, bug reports, or feedback.
+            </p>
+            <p className="support-card-copy">
+              We only use the information you provide to respond to your
+              request.
             </p>
           </article>
 

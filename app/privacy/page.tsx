@@ -21,9 +21,9 @@ const privacyBlocks = [
   {
     title: "What Forgetful keeps",
     items: [
-      "Forgetful stores the mementos, notes, and photos you choose to add.",
-      "Your content is meant to stay lightweight and personal to your use of the app.",
-      "You keep ownership of the content you create.",
+      "Forgetful does not collect, sell, or share personal data beyond the mementos, notes, and photos you choose to create in the app.",
+      "Mementos, notes, and photos are stored locally on your device unless you choose to export them or save them somewhere else.",
+      "You keep ownership and control of the content you create.",
     ],
   },
   {
@@ -37,9 +37,9 @@ const privacyBlocks = [
   {
     title: "Support and contact",
     items: [
-      "If you contact support, we only use the information you send to help answer your question or investigate an issue.",
-      "Sharing screenshots, device details, and app version information can help resolve problems faster.",
-      "If privacy practices change over time, this page can be updated to reflect those changes.",
+      "If you contact support, any information you choose to send is used only to respond to your request or help investigate an issue.",
+      "Screenshots, device details, and app version information are only reviewed for troubleshooting when you decide to provide them.",
+      "This page may be updated if privacy practices change.",
     ],
   },
 ];
@@ -51,9 +51,9 @@ export default function PrivacyPage() {
         <span className="support-eyebrow">Privacy</span>
         <h1 className="support-title">Privacy for Forgetful</h1>
         <p className="support-intro">
-          Forgetful is built for short-term mementos. This page explains, at a
-          high level, what the app stores, how permissions are used, and how
-          support requests are handled.
+          Forgetful is built for short-term mementos. This page explains what
+          the app stores, how permissions are used, and how support information
+          is handled.
         </p>
 
         <div className="support-grid">
