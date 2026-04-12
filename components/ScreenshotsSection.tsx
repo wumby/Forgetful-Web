@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { Iphone } from "./IphoneMockup";
 
 type Screenshot = {
@@ -30,6 +30,12 @@ const screenshots: Screenshot[] = [
     title: "Stay organized",
     description: "Group memories into spaces that feel natural.",
   },
+  {
+    src: "/screenshots/detail.svg",
+    alt: "Forgetful placeholder screenshot for a future feature view",
+    title: "More moments soon",
+    description: "A placeholder for the next part of the Forgetful flow.",
+  },
 ];
 
 const sectionReveal = {
@@ -56,7 +62,12 @@ const itemReveal = {
 };
 
 export default function ScreenshotsSection() {
+  const sectionRef = useRef<HTMLElement | null>(null);
   const scrollerRef = useRef<HTMLDivElement | null>(null);
+  const isInView = useInView(sectionRef, {
+    once: true,
+    amount: 0.35,
+  });
   const [activeIndex, setActiveIndex] = useState(0);
   const [slidesPerView, setSlidesPerView] = useState(1);
 
@@ -154,6 +165,7 @@ export default function ScreenshotsSection() {
 
   return (
     <section
+      ref={sectionRef}
       id="screenshots"
       className="screenshots-section"
       aria-labelledby="screenshots-heading"
@@ -162,8 +174,7 @@ export default function ScreenshotsSection() {
         className="screenshots-shell"
         variants={sectionReveal}
         initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
+        animate={isInView ? "visible" : "hidden"}
       >
         <motion.div className="screenshots-copy" variants={itemReveal}>
           <h2 id="screenshots-heading" className="screenshots-heading">
@@ -219,7 +230,12 @@ export default function ScreenshotsSection() {
                     <motion.article
                       key={shot.src}
                       className={`screenshots-slide screenshots-slot-${role}`}
-                      animate={getDesktopAnimation(role)}
+                      initial={getDesktopAnimation("hidden")}
+                      animate={
+                        isInView
+                          ? getDesktopAnimation(role)
+                          : getDesktopAnimation("hidden")
+                      }
                       transition={{
                         type: "spring",
                         stiffness: 120,

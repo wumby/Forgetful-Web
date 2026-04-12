@@ -1,6 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
+import { siteConfig } from "@/lib/site";
 
 const panels = [
   {
@@ -95,9 +97,15 @@ export default function InfoSection() {
 
         <motion.div className="info-section-contact" variants={itemReveal}>
           <span className="info-contact-label">Questions or support</span>
-          <a href="mailto:hello@forgetful.app" className="info-contact-value">
-            hello@forgetful.app
+          <a
+            href={`mailto:${siteConfig.supportEmail}`}
+            className="info-contact-value"
+          >
+            {siteConfig.supportEmail}
           </a>
+          <Link href="/support" className="info-contact-link">
+            Visit support page
+          </Link>
         </motion.div>
       </motion.div>
     </section>
