@@ -15,20 +15,20 @@ const screenshots: Screenshot[] = [
   {
     src: "/screenshots/IMG_2043.png",
     alt: "Forgetful screenshot showing the main memory feed",
-    title: "Collect mementos",
-    description: "Save small moments before they slip away.",
+    title: "Memento Gallery",
+    description: "See all your small moments together in one spot.",
   },
   {
     src: "/screenshots/IMG_2044.png",
     alt: "Forgetful screenshot showing a memory detail view",
-    title: "Add the details",
-    description: "Keep context, dates, and notes close together.",
+    title: "Organize Folders",
+    description: "Edit, delete, or reorganize folders anytime.",
   },
   {
     src: "/screenshots/IMG_2045.png",
-    alt: "Forgetful screenshot showing folders and organization",
-    title: "Stay organized",
-    description: "Group memories into spaces that feel natural.",
+    alt: "Forgetful screenshot showing a full-screen memento detail page",
+    title: "Memento Details",
+    description: "View each memento in a full-screen detail page.",
   },
   {
     src: "/screenshots/detail.svg",
