@@ -1180,8 +1180,8 @@ main {
     align-items: stretch;
     height: 100svh;
     min-height: 100svh;
-    padding-top: max(0.55rem, env(safe-area-inset-top));
-    padding-bottom: max(0.55rem, env(safe-area-inset-bottom));
+    padding-top: max(0.4rem, env(safe-area-inset-top));
+    padding-bottom: max(0.35rem, env(safe-area-inset-bottom));
   }
 
   .hero-layout {
@@ -1250,14 +1250,14 @@ main {
   }
 
   .hero-visual-cluster {
-    gap: 1.45rem;
+    gap: 1.55rem;
     margin-inline: auto;
-    transform: scale(1.02);
+    transform: scale(1.15);
     transform-origin: center top;
   }
 
   .hero-preview-image {
-    height: 8.4rem;
+    height: 9.75rem;
   }
 
   .screenshots-section {

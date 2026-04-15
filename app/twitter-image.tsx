@@ -30,7 +30,8 @@ export default async function TwitterImage() {
           alignItems: "center",
           justifyContent: "center",
           position: "relative",
-          background: "#020202",
+          background:
+            "radial-gradient(circle at 50% 34%, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.08) 14%, rgba(255,255,255,0.03) 28%, rgba(255,255,255,0) 50%), #020202",
           color: "#ffffff",
           fontFamily: "Arial, sans-serif",
           overflow: "hidden",
@@ -39,12 +40,13 @@ export default async function TwitterImage() {
         <div
           style={{
             position: "absolute",
-            width: "780px",
-            height: "780px",
+            width: "920px",
+            height: "920px",
             borderRadius: "999px",
             background:
-              "radial-gradient(circle, rgba(255,255,255,0.26) 0%, rgba(255,255,255,0.1) 22%, rgba(255,255,255,0.04) 42%, rgba(255,255,255,0) 72%)",
-            filter: "blur(8px)",
+              "radial-gradient(circle, rgba(255,255,255,0.34) 0%, rgba(255,255,255,0.14) 17%, rgba(255,255,255,0.05) 34%, rgba(255,255,255,0) 64%)",
+            filter: "blur(34px)",
+            transform: "translateY(-24px)",
           }}
         />
         <div
@@ -54,17 +56,17 @@ export default async function TwitterImage() {
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
-            gap: "34px",
+            gap: "30px",
           }}
         >
           <img
             src={iconSrc}
             alt={`${siteConfig.name} app icon`}
-            width={200}
-            height={200}
+            width={220}
+            height={220}
             style={{
-              borderRadius: "44px",
-              boxShadow: "0 28px 80px rgba(0, 0, 0, 0.45)",
+              borderRadius: "48px",
+              boxShadow: "0 30px 90px rgba(0, 0, 0, 0.5)",
             }}
           />
           <div
@@ -72,10 +74,11 @@ export default async function TwitterImage() {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              fontSize: 82,
+              fontSize: 86,
               fontWeight: 700,
               letterSpacing: "-0.06em",
               lineHeight: 1,
+              color: "rgba(255,255,255,0.97)",
             }}
           >
             Forgetful
