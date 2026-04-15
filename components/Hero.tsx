@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "framer-motion";
+import { siteConfig } from "@/lib/site";
 
 const previewClusterVariants = {
   hidden: {},
@@ -69,9 +69,9 @@ const previewCardVariants = {
 };
 
 export default function Hero() {
-  const appStoreUrl = "#";
+  const { appStoreUrl } = siteConfig;
   const qrCodeUrl =
-    "https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://www.yourwebsite.com";
+    `https://api.qrserver.com/v1/create-qr-code/?size=144x144&data=${encodeURIComponent(appStoreUrl)}`;
 
   return (
     <div className="hero-shell h-screen w-screen bg-background flex items-center justify-center">
@@ -124,25 +124,29 @@ export default function Hero() {
                 className="hero-qr-image"
               />
             </div>
-            <Link
+            <a
               href={appStoreUrl}
+              target="_blank"
+              rel="noreferrer"
               className="hero-button primary hero-desktop-store-button"
             >
               <span className="hero-download-copy">
                 <span className="hero-download-kicker">Available on</span>
                 <span className="hero-download-label">the App Store</span>
               </span>
-            </Link>
+            </a>
             <div className="hero-button-group">
-              <Link
+              <a
                 href={appStoreUrl}
+                target="_blank"
+                rel="noreferrer"
                 className="hero-button primary hero-download-button"
               >
                 <span className="hero-download-copy">
                   <span className="hero-download-kicker">Download on</span>
                   <span className="hero-download-label">the App Store</span>
                 </span>
-              </Link>
+              </a>
             </div>
           </motion.div>
         </motion.div>
