@@ -13,28 +13,28 @@ type Screenshot = {
 
 const screenshots: Screenshot[] = [
   {
-    src: "/screenshots/IMG_2043.png",
-    alt: "Forgetful screenshot showing the main memory feed",
-    title: "Memento Gallery",
-    description: "See all your small moments together in one spot.",
+    src: "/screenshots/mementos-feed.png",
+    alt: "Forgetful screenshot showing the main mementos feed",
+    title: "Browse",
+    description: "Scan recent mementos in a clean grid sorted by what matters now.",
   },
   {
-    src: "/screenshots/IMG_2044.png",
-    alt: "Forgetful screenshot showing a memory detail view",
-    title: "Organize Folders",
-    description: "Edit, delete, or reorganize folders anytime.",
+    src: "/screenshots/folders-list-view.png",
+    alt: "Forgetful screenshot showing the folders list view",
+    title: "Organize",
+    description: "Create folders, add mementos to them, and keep everything easy to sort through.",
   },
   {
-    src: "/screenshots/IMG_2045.png",
-    alt: "Forgetful screenshot showing a full-screen memento detail page",
-    title: "Memento Details",
-    description: "View each memento in a full-screen detail page.",
+    src: "/screenshots/dunkin-memento-detail.png",
+    alt: "Forgetful screenshot showing a memento detail page",
+    title: "Detail",
+    description: "Open any memento to view it, share it, or export it when you want to keep it.",
   },
   {
-    src: "/screenshots/detail.svg",
-    alt: "Forgetful placeholder screenshot for a future feature view",
-    title: "More moments soon",
-    description: "A placeholder for the next part of the Forgetful flow.",
+    src: "/screenshots/garage-memento-settings.png",
+    alt: "Forgetful screenshot showing memento settings and expiration controls",
+    title: "Capture",
+    description: "Take a photo, add the details that matter, and save it as a memento in a few quick steps.",
   },
 ];
 
@@ -178,7 +178,7 @@ export default function ScreenshotsSection() {
       >
         <motion.div className="screenshots-copy" variants={itemReveal}>
           <h2 id="screenshots-heading" className="screenshots-heading">
-            See Forgetful in motion.
+            See Forgetful in Motion.
           </h2>
         </motion.div>
 

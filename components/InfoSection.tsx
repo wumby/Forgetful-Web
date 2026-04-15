@@ -69,7 +69,7 @@ export default function InfoSection() {
       >
         <motion.div className="info-copy" variants={itemReveal}>
           <h2 id="info-heading" className="info-heading">
-            Everything you need, kept simple.
+            The Essentials.
           </h2>
           <p className="info-intro">
             Privacy, support, and terms for using Forgetful.

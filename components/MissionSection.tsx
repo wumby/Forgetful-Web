@@ -68,10 +68,12 @@ export default function MissionSection() {
 
         <motion.div className="mission-grid" variants={itemReveal}>
           <article className="mission-card">
-            <h3 className="mission-card-title">Keep it light</h3>
+            <h3 className="mission-card-title">
+              Remember what you forget
+            </h3>
             <p className="mission-card-copy">
-              Save the reminder, receipt, outfit, or detail you only need for
-              now.
+              Save the reminders, details, and quick moments you want close
+              without keeping them forever.
             </p>
           </article>
 

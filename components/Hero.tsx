@@ -30,6 +30,25 @@ const previewCards = [
   },
 ];
 
+const heroPreviewImages = [
+  {
+    src: "/screenshots/hero-fridge-reminder.png",
+    alt: "Forgetful memento showing a fridge shopping reminder",
+  },
+  {
+    src: "/screenshots/hero-airbnb-entry.png",
+    alt: "Forgetful memento showing an Airbnb entry reminder",
+  },
+  {
+    src: "/screenshots/hero-garage-reminder.png",
+    alt: "Forgetful memento showing a garage reminder",
+  },
+  {
+    src: "/screenshots/hero-dunkin-order.png",
+    alt: "Forgetful memento showing a Dunkin order reminder",
+  },
+] as const;
+
 const previewCardVariants = {
   hidden: ({ baseY, baseRotate }: (typeof previewCards)[number]) => ({
     opacity: 0,
@@ -141,7 +160,7 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
           >
-            {previewCards.map((card) => (
+            {previewCards.map((card, index) => (
               <motion.div
                 key={card.className}
                 className={card.className}
@@ -164,8 +183,8 @@ export default function Hero() {
                   }}
                 >
                   <img
-                    src="/screenshots/curtains.jpeg"
-                    alt="Curtains"
+                    src={heroPreviewImages[index].src}
+                    alt={heroPreviewImages[index].alt}
                     className="hero-preview-image"
                   />
                 </motion.div>
