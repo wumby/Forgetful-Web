@@ -46,19 +46,33 @@ export default async function TwitterImage() {
             background:
               "radial-gradient(circle, rgba(255,255,255,0.34) 0%, rgba(255,255,255,0.14) 17%, rgba(255,255,255,0.05) 34%, rgba(255,255,255,0) 64%)",
             filter: "blur(34px)",
-            transform: "translateY(-24px)",
+            transform: "translate(270px, -24px)",
           }}
         />
         <div
           style={{
             position: "relative",
             display: "flex",
-            flexDirection: "column",
+            width: "100%",
+            padding: "0 120px",
             alignItems: "center",
-            justifyContent: "center",
-            gap: "30px",
+            justifyContent: "space-between",
           }}
         >
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "flex-start",
+              fontSize: 86,
+              fontWeight: 700,
+              letterSpacing: "-0.06em",
+              lineHeight: 1,
+              color: "rgba(255,255,255,0.97)",
+            }}
+          >
+            Forgetful
+          </div>
           <img
             src={iconSrc}
             alt={`${siteConfig.name} app icon`}
@@ -69,20 +83,6 @@ export default async function TwitterImage() {
               boxShadow: "0 30px 90px rgba(0, 0, 0, 0.5)",
             }}
           />
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontSize: 86,
-              fontWeight: 700,
-              letterSpacing: "-0.06em",
-              lineHeight: 1,
-              color: "rgba(255,255,255,0.97)",
-            }}
-          >
-            Forgetful
-          </div>
         </div>
       </div>
     ),
