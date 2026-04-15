@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { siteConfig } from "@/lib/site";
 
+const socialImagePath = "/opengraph-image";
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
   title: siteConfig.socialTitle,
@@ -19,11 +21,20 @@ export const metadata: Metadata = {
     url: siteConfig.siteUrl,
     siteName: siteConfig.name,
     type: "website",
+    images: [
+      {
+        url: socialImagePath,
+        width: 1200,
+        height: 630,
+        alt: `${siteConfig.name} social preview`,
+      },
+    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: siteConfig.socialTitle,
     description: siteConfig.socialDescription,
+    images: [socialImagePath],
   },
 };
 
