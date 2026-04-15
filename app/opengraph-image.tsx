@@ -39,18 +39,6 @@ export default async function OpenGraphImage() {
       >
         <div
           style={{
-            position: "absolute",
-            width: "920px",
-            height: "920px",
-            borderRadius: "999px",
-            background:
-              "radial-gradient(circle, rgba(255,255,255,0.34) 0%, rgba(255,255,255,0.14) 17%, rgba(255,255,255,0.05) 34%, rgba(255,255,255,0) 64%)",
-            filter: "blur(34px)",
-            transform: "translate(270px, -24px)",
-          }}
-        />
-        <div
-          style={{
             position: "relative",
             display: "flex",
             width: "100%",
@@ -73,16 +61,41 @@ export default async function OpenGraphImage() {
           >
             Forgetful
           </div>
-          <img
-            src={iconSrc}
-            alt={`${siteConfig.name} app icon`}
-            width={220}
-            height={220}
+          <div
             style={{
-              borderRadius: "48px",
-              boxShadow: "0 30px 90px rgba(0, 0, 0, 0.5)",
+              position: "relative",
+              width: "360px",
+              height: "360px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
             }}
-          />
+          >
+            <div
+              style={{
+                position: "absolute",
+                width: "920px",
+                height: "920px",
+                borderRadius: "999px",
+                background:
+                  "radial-gradient(circle, rgba(255,255,255,0.34) 0%, rgba(255,255,255,0.14) 17%, rgba(255,255,255,0.05) 34%, rgba(255,255,255,0) 64%)",
+                filter: "blur(34px)",
+                left: "50%",
+                top: "50%",
+                transform: "translate(-50%, -52%)",
+              }}
+            />
+            <img
+              src={iconSrc}
+              alt={`${siteConfig.name} app icon`}
+              width={220}
+              height={220}
+              style={{
+                borderRadius: "48px",
+                boxShadow: "0 30px 90px rgba(0, 0, 0, 0.5)",
+              }}
+            />
+          </div>
         </div>
       </div>
     ),
