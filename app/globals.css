@@ -1354,6 +1354,14 @@ main {
 }
 
 @media (min-width: 1024px) {
+  .mission-copy {
+    max-width: none;
+  }
+
+  .mission-heading {
+    white-space: nowrap;
+  }
+
   .hero-layout {
     gap: 3.7rem;
   }

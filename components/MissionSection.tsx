@@ -56,13 +56,13 @@ export default function MissionSection() {
         <motion.div className="mission-copy" variants={itemReveal}>
           <span className="mission-eyebrow">The idea</span>
           <h2 id="mission-heading" className="mission-heading">
-            Short-term mementos deserve their own place.
+            Auto Expiring Mementos for the Forgetful.
           </h2>
           <p className="mission-intro">
-            Forgetful is for the small moments you want to keep nearby for a
-            while, without crowding the camera roll you use for everything
-            else, and you can still add the ones that matter to your camera
-            roll at the end.
+            Forgetful is for the things you want to remember,
+            without crowding the camera roll you use for everything else, and
+            you can still add the ones that matter to your camera roll at the
+            end.
           </p>
         </motion.div>
 
@@ -78,9 +78,10 @@ export default function MissionSection() {
           </article>
 
           <article className="mission-card">
-            <h3 className="mission-card-title">Let it pass</h3>
+            <h3 className="mission-card-title">Auto expiring mementos</h3>
             <p className="mission-card-copy">
-              Hold onto the moment, then let it expire when it has done its job.
+              Keep moments around for as long as you need, without having to
+              remember to go back and clean them up later.
             </p>
           </article>
 

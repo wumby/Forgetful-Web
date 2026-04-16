@@ -16,7 +16,8 @@ const screenshots: Screenshot[] = [
     src: "/screenshots/mementos-feed.png",
     alt: "Forgetful screenshot showing the main mementos feed",
     title: "Browse",
-    description: "Scan recent mementos in a clean grid sorted by what matters now.",
+    description:
+      "Scan recent mementos in a clean grid and sort by expiring soonest.",
   },
   {
     src: "/screenshots/folders-list-view.png",
